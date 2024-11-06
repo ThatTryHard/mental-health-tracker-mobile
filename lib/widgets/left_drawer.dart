@@ -42,6 +42,7 @@ class LeftDrawer extends StatelessWidget {
             title: const Text('Halaman Utama'),
             // Bagian redirection ke MyHomePage
             onTap: () {
+              Navigator.pop(context);
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
@@ -58,6 +59,7 @@ class LeftDrawer extends StatelessWidget {
                 Buatlah routing ke MoodEntryFormPage di sini,
                 setelah halaman MoodEntryFormPage sudah dibuat.
                 */
+              Navigator.pop(context);
               Navigator.push(
                 context,
                 MaterialPageRoute(
