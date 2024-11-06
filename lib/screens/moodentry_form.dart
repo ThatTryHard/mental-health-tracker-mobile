@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mental_health_tracker/widgets/left_drawer.dart';
 // Impor drawer yang sudah dibuat sebelumnya
 
 class MoodEntryFormPage extends StatefulWidget {
@@ -25,6 +26,7 @@ class _MoodEntryFormPageState extends State<MoodEntryFormPage> {
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Colors.white,
       ),
+      drawer: const LeftDrawer(),
       // Tambahkan drawer yang sudah dibuat di sini
       body: Form(
         key: _formKey,
