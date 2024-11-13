@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mental_health_tracker/screens/list_moodentry.dart';
 import 'package:mental_health_tracker/screens/menu.dart';
 import 'package:mental_health_tracker/screens/moodentry_form.dart';
 
@@ -27,7 +28,6 @@ class LeftDrawer extends StatelessWidget {
                 ),
                 Padding(padding: EdgeInsets.all(8)),
                 Text("Ayo jaga kesehatan mentalmu setiap hari disini!",
-                    // Tambahkan gaya teks dengan center alignment, font ukuran 15, warna putih, dan weight biasa
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 15,
@@ -55,16 +55,23 @@ class LeftDrawer extends StatelessWidget {
             title: const Text('Tambah Mood'),
             // Bagian redirection ke MoodEntryFormPage
             onTap: () {
-              /*
-                Buatlah routing ke MoodEntryFormPage di sini,
-                setelah halaman MoodEntryFormPage sudah dibuat.
-                */
               Navigator.pop(context);
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => const MoodEntryFormPage(),
                 ),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.add_reaction_rounded),
+            title: const Text('Daftar Mood'),
+            onTap: () {
+              // Route menu ke halaman mood
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MoodEntryPage()),
               );
             },
           ),
